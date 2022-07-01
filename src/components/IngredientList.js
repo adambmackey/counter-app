@@ -7,7 +7,7 @@ const ingredientElements = ingredients.map(ingredient => {
 })
 
   return (
-    <div>
+    <div className='ingredient-grid'>
         {ingredientElements}
     </div>
   )

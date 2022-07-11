@@ -21,6 +21,10 @@ function App() {
     setRecipes([...recipes, newRecipe])
   }
 
+  const handleRecipeDelete = (id) => {
+      setRecipes(recipes.filter(recipe => recipe.id !== id))
+  }
+
 
   return (
       <RecipeList 
@@ -40,7 +44,7 @@ const sampleRecipes = [
     name: 'Plain Chicken',
     servings: 3,
     cookTime: '1:45', 
-    instructions: "1. Put salt on chicken \n2 Put chicken in oven \n3 Eat chicken",
+    instructions: "1. Put salt on chicken \n 2. Put chicken in oven \n 3. Eat chicken",
     ingredients: [
       {
         id: 1, 
@@ -59,7 +63,7 @@ const sampleRecipes = [
     name: 'Plain Pork',
     servings: 5,
     cookTime: '0:45', 
-    instructions: "1. Put salt on pork \n2. Put pork in oven\n3. Eat pork",
+    instructions: "1. Put salt on pork \n 2. Put pork in oven\n 3. Eat pork",
     ingredients: [
       {
         id: 1, 
